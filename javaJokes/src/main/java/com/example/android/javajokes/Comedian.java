@@ -8,8 +8,6 @@ public class Comedian {
     private ArrayList<String> jokes = new ArrayList<>();
 
     public Comedian(){
-
-        // Insert jokes into ArrayList
         initializeJokes();
     }
 
@@ -25,13 +23,14 @@ public class Comedian {
     }
 
     private void initializeJokes(){
-        jokes.add("\n" +
-                "Parallel lines have so much in common,\n" +
+        // Courtesy of https://www.goodbadjokes.com/
+
+        jokes.add("Parallel lines have so much in common,\n" +
                 "it's a shame they're never gonna meet.");
         jokes.add("What does a vegan zombie eat?\n" +
-                "Graaaaaaaaaaaaaaaaaaaains!!\n");
+                "Graaaaaaaaaaaaaaaaaaaains!!");
         jokes.add("What did one snowman say to the other snowman?\n" +
-                "It smells like carrots out here!\n");
+                "It smells like carrots out here!");
         jokes.add("Where do cows go for a first date?\n" +
                 "To the moooovies!");
         jokes.add("What does a clock do when it's hungry?\n" +
