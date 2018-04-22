@@ -1,8 +1,10 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
 
@@ -43,18 +46,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void tellJoke(View view) {
 
+        // Uncomment for Steps 1 and 2.
+        /*Comedian comedian = new Comedian();
 
-        Comedian comedian = new Comedian();
-
-        String joke = comedian.tellJoke();
+        String joke = comedian.tellJoke();*/
 
         // Step 1: Create a Java Library
         //Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
 
-        // Step 2: Create an Android Library
+        /*// Step 2: Create an Android Library
         Intent i = new Intent(this, JokeActivity.class);
         i.putExtra("joke", joke);
-        startActivity(i);
+        startActivity(i);*/
+
+        // Step 3: Setup GCE
+        new EndpointsAsyncTask().execute(this);
+
     }
 
 }

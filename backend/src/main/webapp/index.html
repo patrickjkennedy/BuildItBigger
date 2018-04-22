@@ -51,8 +51,10 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Hello, Endpoints!</h1>
+
                 <p>Enter your name and press the button below to call your Google Cloud Endpoints
                     API.</p>
+
                 <form>
                     <div class="input-group">
                         <input type="text" class="form-control input-lg" placeholder="Name"
@@ -64,10 +66,12 @@
                     </div>
                 </form>
                 <br/>
+
                 <p>If you need step-by-step instructions for connecting your Android application to
                     this backend module, see <a
                             href="https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/HelloEndpoints">"App
                         Engine Java Endpoints Module" template documentation</a>.</p>
+
                 <p>
                     <small>
                         For more information about Google App Engine for Java, check out the <a
@@ -94,7 +98,6 @@
           function(response) {
             var outputAlertDiv = document.getElementById('outputAlert');
             outputAlertDiv.style.visibility = 'visible';
-
             if (!response.error) {
               outputAlertDiv.className = 'alert alert-success';
               outputAlertDiv.innerHTML = '<h2>' + response.result.data + '</h2>';
@@ -124,7 +127,6 @@
       }
       gapi.client.load(apiName, apiVersion, callback, apiRoot);
     }
-
 </script>
 <!--
  Load the Google APIs Client Library for JavaScript
