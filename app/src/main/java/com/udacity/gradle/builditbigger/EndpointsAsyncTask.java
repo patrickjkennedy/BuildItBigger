@@ -55,6 +55,7 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
         // Step 3: Step 3: Setup GCE
         Intent i = new Intent(mContext, JokeActivity.class);
         i.putExtra("joke", result);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(i);
     }
 }
