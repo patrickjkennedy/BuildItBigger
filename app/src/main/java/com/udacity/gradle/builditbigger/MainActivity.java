@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);*/
 
         // Step 3: Setup GCE
-        new EndpointsAsyncTask().execute(this);
+        new EndpointsAsyncTask().execute(getApplicationContext());
 
     }
 
